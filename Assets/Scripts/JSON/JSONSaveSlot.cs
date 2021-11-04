@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class JSONSaveSlot : MonoBehaviour
+// 저장된 게임 데이터
+public class JSONSaveSlot
 {
     
 }
+
+    

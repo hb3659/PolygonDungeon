@@ -2,27 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// 게임 내에서 보여지는 데이터
 public class PlayerData : CharacterData
 {
     [SerializeField]
-    protected string charName;
-    [SerializeField]
-    protected int charID;
+    protected string _playerName;
     [SerializeField]
     protected int _level;
     [SerializeField]
-    protected float _mana;
+    protected int _mana;
     [SerializeField]
-    protected float _maxMana;
+    protected int _maxMana;
     [SerializeField]
     protected float _exp;
     [SerializeField]
     protected int _gold;
 
-
+    public string PlayerName { get { return _playerName; } set { _playerName = value; } }
     public int Level { get { return _level; } set { _level = value; } }
-    public float Mana { get { return _mana; } set { _mana = value; } }
-    public float MaxMana { get { return _maxMana; } set { _maxMana = value; } }
+    public int Mana { get { return _mana; } set { _mana = value; } }
+    public int MaxMana { get { return _maxMana; } set { _maxMana = value; } }
     public float Exp { get { return _exp; } set { _exp = value; } }
     public int Gold { get { return _gold; } set { _gold = value; } }
 

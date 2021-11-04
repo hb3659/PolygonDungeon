@@ -9,12 +9,26 @@ public class SelectButtonMng : MonoBehaviour
     private Image checkPanel;
     [SerializeField]
     private SelectSceneMng sceneMng;
+    [SerializeField]
+    private Animator noName;
+    [SerializeField]
+    private InputField input;
+    private string inputText;
 
-    int charIndex;
+    [HideInInspector]
+    public int charIndex;
+    [HideInInspector]
+    public int charID;
 
     void Start()
     {
         charIndex = 0;
+        charID = 101;
+    }
+
+    void Update()
+    {
+        inputText = input.text;
     }
 
     public void PreviousButton()
@@ -30,9 +44,17 @@ public class SelectButtonMng : MonoBehaviour
 
     public void CreateButton()
     {
-        FadeMng.Instance.Fade(0, 1);
-        GameManager.Instance.NextScene = "GameScene";
-        SceneMng.Instance.changeSceneAsync("LoadingScene");
+        if (inputText == "")
+            noName.SetTrigger("NoName");
+        else
+        {
+            // 캐릭터 정보 저장
+
+
+            FadeMng.Instance.Fade(0, 1);
+            GameManager.Instance.NextScene = "GameScene";
+            SceneMng.Instance.changeSceneAsync("LoadingScene");
+        }
     }
 
     public void ExitButton()
@@ -45,9 +67,13 @@ public class SelectButtonMng : MonoBehaviour
         sceneMng.characters[charIndex].SetActive(false);
 
         charIndex++;
+        charID++;
 
         if (charIndex > sceneMng.characters.Length - 1)
+        {
             charIndex = 0;
+            charID = 101;
+        }
 
         sceneMng.characters[charIndex].SetActive(true);
         sceneMng.charJob.text = sceneMng.charExplain.charName[charIndex];
@@ -59,9 +85,13 @@ public class SelectButtonMng : MonoBehaviour
         sceneMng.characters[charIndex].SetActive(false);
 
         charIndex--;
+        charID--;
 
         if (charIndex < 0)
+        {
             charIndex = sceneMng.characters.Length - 1;
+            charID = 100 + sceneMng.characters.Length;
+        }
 
         sceneMng.characters[charIndex].SetActive(true);
         sceneMng.charJob.text = sceneMng.charExplain.charName[charIndex];

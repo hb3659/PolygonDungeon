@@ -7,6 +7,14 @@ public class LoadGameButtonMng : MonoBehaviour
 {
     [SerializeField]
     private Image EmptyPopUpPanel;
+    //[SerializeField]
+    //private Button slot1;
+    //[SerializeField]
+    //private Button slot2;
+    //[SerializeField]
+    //private Button slot3;
+    [SerializeField]
+    private Button[] slots;
 
     public void BackButton()
     {
@@ -14,7 +22,7 @@ public class LoadGameButtonMng : MonoBehaviour
         SceneMng.Instance.changeScene("TitleScene");
     }
 
-    public void SlotButton()
+    public void SlotButton(int index)
     {
         EmptyPopUpPanel.gameObject.SetActive(true);
     }

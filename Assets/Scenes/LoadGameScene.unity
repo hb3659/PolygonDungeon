@@ -292,12 +292,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 228629077}
         m_TargetAssemblyTypeName: LoadGameButtonMng, Assembly-CSharp
-        m_MethodName: EmptySlotButton
-        m_Mode: 1
+        m_MethodName: SlotButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -332,6 +332,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EmptyPopUpPanel: {fileID: 2023621025}
+  slots:
+  - {fileID: 1372242763}
+  - {fileID: 490018716}
+  - {fileID: 161555357}
 --- !u!4 &228629078
 Transform:
   m_ObjectHideFlags: 0
@@ -344,7 +348,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &351360590
 GameObject:
@@ -621,12 +625,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 228629077}
         m_TargetAssemblyTypeName: LoadGameButtonMng, Assembly-CSharp
-        m_MethodName: EmptySlotButton
-        m_Mode: 1
+        m_MethodName: SlotButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1538,7 +1542,7 @@ GameObject:
   - component: {fileID: 1342457128}
   - component: {fileID: 1342457127}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SlotText_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1861,8 +1865,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 228629077}
         m_TargetAssemblyTypeName: LoadGameButtonMng, Assembly-CSharp
-        m_MethodName: EmptySlotButton
-        m_Mode: 1
+        m_MethodName: SlotButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1883,7 +1887,7 @@ GameObject:
   - component: {fileID: 1445428956}
   - component: {fileID: 1445428955}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SlotText_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1991,7 +1995,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1566285596
 GameObject:
@@ -2262,6 +2266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ddc691f7b8ae946b338905b449d5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  texts: {fileID: 0}
 --- !u!4 &1648556380
 Transform:
   m_ObjectHideFlags: 0
@@ -2443,7 +2448,7 @@ GameObject:
   - component: {fileID: 1816964690}
   - component: {fileID: 1816964689}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SlotText_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2685,36 +2690,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
---- !u!1 &1875238576
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1875238577}
-  m_Layer: 0
-  m_Name: SaveSlot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1875238577
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1875238576}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 353.08633, y: 200.2227, z: -39.010395}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1902982913
 GameObject:
   m_ObjectHideFlags: 0

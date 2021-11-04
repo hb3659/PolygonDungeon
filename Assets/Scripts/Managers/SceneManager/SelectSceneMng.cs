@@ -13,7 +13,7 @@ public class SelectSceneMng : MonoBehaviour
     [HideInInspector]
     public GameObject[] characters;
 
-    public CharExplain charExplain;
+    public JSONCharExplain charExplain;
 
     [Header("Explain")]
     [SerializeField]
@@ -80,16 +80,18 @@ public class SelectSceneMng : MonoBehaviour
         }
     }
 
+    // 캐릭터 설명 정보를 json 파일로 저장
     void characterInfoSave()
     {
-        charExplain = new CharExplain(characters.Length);
+        charExplain = new JSONCharExplain(characters.Length);
         string jsonData = JSONCreator.Instance.ObjectToJson(charExplain);
         JSONCreator.Instance.CreateJsonFile(Application.dataPath + "/Resources/JSON", "charExplain", jsonData);
     }
 
+    // json 파일 불러오기
     void characterInfoLoad()
     {
-        JSONCreator.Instance.LoadJsonFile<CharExplain>(Application.dataPath + "/Resources/JSON", "charExplain");
+        JSONCreator.Instance.LoadJsonFile<JSONCharExplain>(Application.dataPath + "/Resources/JSON", "charExplain");
     }
 
     void characterInfo()
