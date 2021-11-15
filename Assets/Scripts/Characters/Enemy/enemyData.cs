@@ -16,7 +16,7 @@ public enum EnemyID
     Dragon,
 }
 
-public class enemyData : CharacterData
+public class EnemyData : CharacterData
 {
     [SerializeField]
     protected string _enemyName;
@@ -36,7 +36,8 @@ public class enemyData : CharacterData
 
     void SetName()
     {
-        switch (CharID)
+        // 적의 아이디 값을 미리 할당하자
+        switch (ID)
         {
             case (201):
                 _enemyName = "박쥐";

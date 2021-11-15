@@ -10,33 +10,21 @@ public class PlayerData : CharacterData
     [SerializeField]
     protected int _level;
     [SerializeField]
-    protected int _mana;
+    protected float _mana;
     [SerializeField]
-    protected int _maxMana;
+    protected float _maxMana;
     [SerializeField]
     protected float _exp;
+    [SerializeField]
+    protected float _maxExp;
     [SerializeField]
     protected int _gold;
 
     public string PlayerName { get { return _playerName; } set { _playerName = value; } }
     public int Level { get { return _level; } set { _level = value; } }
-    public int Mana { get { return _mana; } set { _mana = value; } }
-    public int MaxMana { get { return _maxMana; } set { _maxMana = value; } }
+    public float Mana { get { return _mana; } set { _mana = value; } }
+    public float MaxMana { get { return _maxMana; } set { _maxMana = value; } }
     public float Exp { get { return _exp; } set { _exp = value; } }
+    public float MaxExp { get { return _maxExp; } set { _maxExp = value; } }
     public int Gold { get { return _gold; } set { _gold = value; } }
-
-    private void Awake()
-    {
-        // 캐릭터 이름
-        // 캐릭터 직업
-        _level = 1;
-        _HP = 300;
-        _maxHP = 300;
-        _mana = 200;
-        _maxMana = 200;
-        _offensivePower = 50;
-        _defensivePower = 30;
-        _exp = 0f;
-        _gold = 0;
-    }
 }

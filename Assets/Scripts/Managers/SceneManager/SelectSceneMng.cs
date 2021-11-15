@@ -12,7 +12,7 @@ public class SelectSceneMng : MonoBehaviour
 
     [HideInInspector]
     public GameObject[] characters;
-
+    [HideInInspector]
     public JSONCharExplain charExplain;
 
     [Header("Explain")]
@@ -20,9 +20,12 @@ public class SelectSceneMng : MonoBehaviour
     public Text charJob;
     [SerializeField]
     public Text charScript;
+    [SerializeField]
+    public int charID;
 
     [Header("Value Variables")]
     private bool isArrive = true;
+    private string charPath = "Prefabs/Characters/Players/";
 
 
     void Start()
@@ -30,6 +33,7 @@ public class SelectSceneMng : MonoBehaviour
         explainPanel.gameObject.SetActive(false);
 
         FadeMng.Instance.Fade(1, 0);
+        GameManager.Instance.CurrentScene = "SelectScene";
 
         createPrefabs();
         characterInfoSave();
@@ -47,12 +51,12 @@ public class SelectSceneMng : MonoBehaviour
     void createPrefabs()
     {
         // 甘 积己
-        GameObject map = Resources.Load<GameObject>("Prefabs/Environments/Center_Hall");
+        GameObject map = Resources.Load<GameObject>("Prefabs/Environments/SelectHall");
 
         // 某腐磐 积己
-        GameObject warrior = Resources.Load<GameObject>("Prefabs/Characters/Warrior");
-        GameObject archer = Resources.Load<GameObject>("Prefabs/Characters/Archer");
-        GameObject wizard = Resources.Load<GameObject>("Prefabs/Characters/Wizard");
+        GameObject warrior = Resources.Load<GameObject>(charPath + "Warrior");
+        GameObject archer = Resources.Load<GameObject>(charPath + "Archer");
+        GameObject wizard = Resources.Load<GameObject>(charPath + "Wizard");
 
         Instantiate(map);
 
